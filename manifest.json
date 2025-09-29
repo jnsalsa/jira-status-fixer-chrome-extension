@@ -1,0 +1,20 @@
+{
+    "name": "Jira Status Fixer",
+    "description": "Relocates the Jira Status dropdown to where it used to be.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [],
+    "action": {
+      "default_popup": "jira_status_fixer.html",
+      "default_icon": "jira_status_fixer.png"
+    },
+    "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://*.atlassian.net/browse/*"
+      ],
+       "run_at": "document_end"
+    }
+  ]
+}
